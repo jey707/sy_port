@@ -1,0 +1,247 @@
+@import url("reset.css");
+@import url("common.css");
+
+@import url("header.css");
+@import url("footer.css");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+
+html {
+  font-family: "Noto Sans KR", sans-serif;
+}
+.swiper {
+  position: relative;
+  height: 100vh;
+}
+.swiper .swiper-wrapper {
+  width: 100%;
+}
+.swiper-slide {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--main-text-color);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.swiper-slide .text_box {
+  height: 300px;
+  width: 100%;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.swiper-slide h1 {
+  font-size: 60px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+.swiper-slide p {
+  font-size: 30px;
+}
+
+.swiper-pagination .swiper-pagination-bullet {
+  background-color: rgba(255, 255, 255, 0.8);
+  width: 50px;
+  border-radius: 20px;
+}
+
+.post-slider {
+  position: relative;
+  margin: 65px 0;
+  text-align: center;
+}
+
+.con-title {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 50px;
+}
+.con-subtitle {
+  font-size: 16px;
+  margin-bottom: 60px;
+}
+
+.post-slider .arrow-box {
+  width: 70px;
+  height: 70px;
+  border: 3px solid rgba(0, 0, 0, 0.3);
+  text-align: center;
+  line-height: 70px;
+  color: rgba(0, 0, 0, 0.3);
+  font-size: 38px;
+  cursor: pointer;
+}
+.post-slider .prev-box {
+  position: absolute;
+  top: 60%;
+  left: 5%;
+}
+
+.post-slider .next-box {
+  position: absolute;
+  top: 60%;
+  right: 5%;
+}
+
+.post-wrapper {
+  width: 80%;
+  display: inline-block;
+}
+
+.post {
+  width: 265px;
+  height: 385px;
+  margin: 0 10px;
+  position: relative;
+}
+
+.post img {
+  width: 100%;
+  height: 100%;
+}
+.post .text-box {
+  z-index: 5;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  display: table;
+  text-align: center;
+  color: var(--main-text-color);
+}
+.post .text-con {
+  padding: 15px;
+  display: table-cell;
+  vertical-align: middle;
+  word-break: keep-all;
+}
+.post > .text-box p {
+  font-size: 18px;
+}
+.text-con .con-qua {
+  background: rgba(248, 224, 228, 0.35);
+  width: 120px;
+  border-radius: 50px;
+  height: 30px;
+  line-height: 30px;
+  margin: auto;
+}
+
+.post .text-con p:not(:nth-child(2)) {
+  opacity: 0;
+}
+
+.post .text-con i,
+.post .text-con p {
+  margin-bottom: 20px;
+}
+.post .text-con p:last-child {
+  font-size: 16px;
+  line-height: 1.5;
+}
+.post > .text-box:hover {
+  background: url("../img/main/contents/slick_bg.jpg");
+  background-size: 100% 100%;
+  opacity: 0.9;
+}
+.post > .text-box:hover img {
+  opacity: 0;
+}
+.post > .text-box:hover i {
+  opacity: 0;
+  max-height: 0;
+  transform: rotateY(3turn);
+  transition: all 2s;
+  position: relative;
+  top: -5%;
+}
+.post > .text-box:hover p {
+  opacity: 1;
+  height: auto;
+  transition: all 1s ease-in;
+}
+
+/* more-con */
+.more-con {
+  padding: 50px 0;
+  height: 650px;
+  background: linear-gradient(
+      to top,
+      rgba(255, 255, 255, 0.7) 50%,
+      rgba(255, 255, 255, 0.9) 400%
+    ),
+    url("../img/main/contents/city_bg.jpg") no-repeat center;
+  background-size: cover;
+  text-align: center;
+}
+
+.more-box {
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.more-box .more-intro {
+  width: 40%;
+  height: 100%;
+  position: relative;
+}
+.more-box .more-intro:first-child {
+  margin-right: 25px;
+}
+.more-img {
+  width: 100%;
+  height: 75%;
+}
+.more-box .more-img_left {
+  background: url("../img/main/contents/kyle.jpg") no-repeat center;
+  background-size: cover;
+}
+.more-box .more-img_right {
+  background: url("../img/main/contents/markus.jpg") no-repeat center;
+  background-size: cover;
+}
+
+.more-box .more-txt {
+  width: 90%;
+  height: 35%;
+  background-color: white;
+  position: absolute;
+  bottom: 10%;
+  right: 5%;
+  text-align: left;
+}
+
+.more-txt > h2 {
+  font-size: 1.45em;
+  font-weight: 600;
+  margin: 20px 15px 5px 15px;
+}
+.more-txt p {
+  word-break: keep-all;
+  margin: 20px 15px 5px 15px;
+  line-height: 1.5em;
+}
+.more-txt a {
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  width: 120px;
+  height: 45px;
+  background-color: rgba(0, 51, 74, 1);
+  padding: 0 10px;
+  line-height: 43px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.more-txt a i {
+  margin-left: 50px;
+}
+
+.more-txt a:hover {
+  opacity: 0.9;
+}

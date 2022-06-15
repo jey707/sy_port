@@ -1,0 +1,39 @@
+:root {
+  --main-text-color: white;
+}
+
+.txt_under {
+  text-decoration: underline;
+}
+
+.scroll-top {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  top: 100%;
+  right: 1%;
+  background: linear-gradient(
+    to bottom right,
+    rgb(0, 66, 97),
+    rgb(63, 175, 189)
+  );
+  color: white;
+  cursor: pointer;
+}
+
+.btm-i {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.scroll-top:hover {
+  background: linear-gradient(to bottom right, rgb(0, 66, 97), rgb(66, 139, 6));
+}
+
+.top-btn {
+  z-index: 99;
+  transition: transform 1s;
+  transform: translateY(-450%);
+}

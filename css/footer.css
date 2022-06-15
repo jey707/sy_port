@@ -1,0 +1,54 @@
+footer {
+  color: var(--main-text-color);
+  font-size: 15px;
+}
+.foot-container {
+  height: 15vh;
+}
+
+.foot-container .foot-menu {
+  width: 100%;
+  height: 30%;
+  background: #636b6e;
+}
+.foot-menu ul {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.foot-menu ul li {
+  height: 100%;
+  width: 10%;
+  color: var(--main-text-color);
+  border-right: 1px solid #4e5152;
+  text-align: center;
+}
+.foot-menu ul li:first-child {
+  border-left: 1px solid #4e5152;
+}
+.foot-menu ul li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  line-height: 2.5rem;
+}
+.foot-menu ul li a:hover {
+  text-decoration: underline;
+}
+
+.company-info {
+  text-align: center;
+  background: #323537;
+  height: 90%;
+}
+.company-info .info-box {
+  padding: 35px 0 20px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.company-info > .info-box p:not(last-child)::after {
+  content: "\00a0";
+}
