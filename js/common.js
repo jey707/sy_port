@@ -71,3 +71,9 @@ $(document).ready(function () {
     $(this).addClass("open-arrow");
   });
 });
+
+const langBox = document.querySelector(".m-lenguage");
+document.querySelector(".lang-btn").addEventListener("click", function () {
+  console.log(langBox);
+  langBox.classList.toggle("m-lang-show");
+});
