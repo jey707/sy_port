@@ -74,6 +74,5 @@ $(document).ready(function () {
 
 const langBox = document.querySelector(".m-lenguage");
 document.querySelector(".lang-btn").addEventListener("click", function () {
-  console.log(langBox);
   langBox.classList.toggle("m-lang-show");
 });

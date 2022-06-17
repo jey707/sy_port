@@ -245,3 +245,45 @@ html {
 .more-txt a:hover {
   opacity: 0.9;
 }
+
+@media (max-width: 1200px) {
+  .arrow-box {
+    display: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .swiper {
+    height: 90vh;
+  }
+}
+
+@media (max-width: 700px) {
+  .swiper {
+    height: 60vh;
+  }
+  .swiper-slide .text_box {
+    justify-content: center;
+  }
+  .swiper-slide h1 {
+    font-size: 45px;
+    margin-bottom: 10px;
+  }
+  .swiper-slide p {
+    font-size: 20px;
+  }
+  .con-subtitle {
+    word-break: keep-all;
+  }
+}
+
+@media (max-width: 320px) {
+  .con-title {
+    font-size: 26px;
+    margin-bottom: 25px;
+  }
+  .con-subtitle {
+    font-size: 14px;
+    margin-bottom: 40px;
+  }
+}
