@@ -76,3 +76,13 @@ const langBox = document.querySelector(".m-lenguage");
 document.querySelector(".lang-btn").addEventListener("click", function (e) {
   langBox.classList.toggle("m-lang-show");
 });
+
+// scrren resize
+let size = document.querySelector("body");
+
+window.onresize = function (e) {
+  let innerWidth = window.innerWidth;
+  if (innerWidth > 1200) {
+    langBox.classList.remove("m-lang-show");
+  }
+};
