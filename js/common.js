@@ -35,7 +35,7 @@ function toggleMenu() {
 document.addEventListener("click", function (e) {
   if (showMenu === true) {
     let target = e.target;
-    let curTarget = e.currentTarget;
+    // let curTarget = e.currentTarget;
     if (!target.classList.contains("mhd-menu-btn")) {
       if (
         !target.classList.contains("show-menu") &&
@@ -73,6 +73,16 @@ $(document).ready(function () {
 });
 
 const langBox = document.querySelector(".m-lenguage");
-document.querySelector(".lang-btn").addEventListener("click", function () {
+document.querySelector(".lang-btn").addEventListener("click", function (e) {
   langBox.classList.toggle("m-lang-show");
 });
+
+// scrren resize
+let size = document.querySelector("body");
+
+window.onresize = function (e) {
+  let innerWidth = window.innerWidth;
+  if (innerWidth > 1200) {
+    langBox.classList.remove("m-lang-show");
+  }
+};
