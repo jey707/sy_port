@@ -1,7 +1,7 @@
 const body = document.querySelector("body");
 const topBtn = document.querySelector(".scroll-top");
 const header = document.querySelector(".hd");
-const menuBtn = document.querySelector(".mhd-menu-btn");
+const menuBtn = document.querySelector(".mhd_menu");
 let showMenu = false;
 
 window.addEventListener("scroll", function (e) {
@@ -29,6 +29,7 @@ topBtn.addEventListener("click", screenTop);
 
 function toggleMenu() {
   document.querySelector(".mhd").classList.toggle("show-menu");
+  document.querySelector(".mhd_first").classList.toggle("active");
   let classYn = document.querySelector(".mhd").classList.contains("show-menu");
   return (showMenu = classYn);
 }
@@ -36,7 +37,7 @@ document.addEventListener("click", function (e) {
   if (showMenu === true) {
     let target = e.target;
     // let curTarget = e.currentTarget;
-    if (!target.classList.contains("mhd-menu-btn")) {
+    if (!target.classList.contains("mhd_first")) {
       if (
         !target.classList.contains("show-menu") &&
         !target.classList.contains("list-li") &&
@@ -86,3 +87,8 @@ window.onresize = function (e) {
     langBox.classList.remove("m-lang-show");
   }
 };
+
+// const hamnbuger = document.querySelector('.mhd_first');
+// hambuger.addEventListener("click" function(e){
+//   console.log('aaaaaaaaaaaaa')
+// })
