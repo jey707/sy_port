@@ -1,7 +1,7 @@
 const body = document.querySelector("body");
 const topBtn = document.querySelector(".scroll-top");
 const header = document.querySelector(".hd");
-const menuBtn = document.querySelector(".mhd_menu");
+const menuBtn = document.querySelector(".mhd_menu-box");
 let showMenu = false;
 
 window.addEventListener("scroll", function (e) {
@@ -37,7 +37,12 @@ document.addEventListener("click", function (e) {
   if (showMenu === true) {
     let target = e.target;
     // let curTarget = e.currentTarget;
-    if (!target.classList.contains("mhd_first")) {
+    console.log(target);
+    if (
+      !target.classList.contains("mhd_first") &&
+      !target.classList.contains("mhd_menu") &&
+      !target.classList.contains("mhd_menu-box")
+    ) {
       if (
         !target.classList.contains("show-menu") &&
         !target.classList.contains("list-li") &&
@@ -45,6 +50,7 @@ document.addEventListener("click", function (e) {
         !target.classList.contains("arr-right")
       ) {
         document.querySelector(".mhd").classList.remove("show-menu");
+        document.querySelector(".mhd_first").classList.remove("active");
 
         showMenu = false;
       }
