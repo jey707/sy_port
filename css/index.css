@@ -228,7 +228,7 @@ html {
 }
 .more-txt a {
   position: absolute;
-  bottom: 5%;
+  bottom: 4%;
   right: 5%;
   width: 120px;
   height: 45px;
@@ -236,6 +236,7 @@ html {
   padding: 0 10px;
   line-height: 43px;
   color: rgba(255, 255, 255, 0.8);
+  display: inline-block;
 }
 
 .more-txt a i {
@@ -250,11 +251,66 @@ html {
   .arrow-box {
     display: none;
   }
+  .more-con .more-box .more-txt {
+    height: 40%;
+  }
 }
 
 @media (max-width: 900px) {
   .swiper {
     height: 90vh;
+  }
+  .more-con .more-box .more-txt {
+    height: 45%;
+  }
+}
+
+@media (max-width: 750px) {
+  .more-con {
+    padding: 40px 0;
+  }
+  .more-con .con-title {
+    margin-bottom: 15px;
+  }
+  .more-con .con-subtitle {
+    margin-bottom: 25px;
+  }
+  .more-box {
+    display: grid;
+    grid-template-columns: 100%;
+    place-items: center;
+    /* row-gap: 10%; */
+    grid-row-gap: 20%;
+  }
+  .more-box .more-intro {
+    width: 80%;
+  }
+  .more-box .more-intro:first-child {
+    margin-right: 0;
+  }
+  .more-box .more-intro .more-img {
+    height: 110%;
+  }
+  .more-box .more-intro .more-txt {
+    height: 80%;
+    bottom: -40%;
+    font-size: 14px;
+  }
+  .more-box .more-intro .more-txt > h2 {
+    margin-top: 20px;
+    font-size: 1.15em;
+  }
+  .more-box .more-intro .more-txt p {
+    margin-top: 0;
+    line-height: 1;
+  }
+  .more-box .more-intro .more-txt a {
+    width: 85px;
+    height: 40px;
+    font-size: 14px;
+  }
+  .more-box .more-intro .more-txt a i {
+    margin-left: 30px;
   }
 }
 

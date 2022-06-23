@@ -49,6 +49,31 @@ footer {
   justify-content: center;
 }
 
-.company-info > .info-box p:not(last-child)::after {
-  content: "\00a0";
+@media (max-width: 1300px) {
+  .foot-container .foot-menu {
+    height: 170px;
+  }
+  .foot-container .foot-menu ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .foot-container .foot-menu li {
+    width: 100%;
+    align-self: center;
+    box-sizing: border-box;
+  }
+  .foot-container .foot-menu li:not(:last-child) {
+    border-bottom: 1px solid #4e5152;
+  }
+}
+
+@media (max-width: 600px) {
+  .foot-container {
+    height: 20vh;
+  }
+  .foot-container .company-info .info-box {
+    display: inline-block;
+    line-height: 1.5;
+    padding: 25px 0 25px;
+  }
 }
