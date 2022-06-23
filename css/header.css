@@ -84,7 +84,7 @@
   width: 100%;
   display: inline-block;
 }
-.hd_list > .hd_list_title :hover {
+.hd_list > .hd_list_title:hover .title_lnk {
   text-decoration: underline;
 }
 .hd_list > .hd_list_title > a {
@@ -158,6 +158,7 @@
 .hd_list_title:hover .sub_list {
   opacity: 1;
   z-index: 9999;
+  transition: opacity 0.5s;
 }
 .hd_middle:hover .hide_wrap {
   opacity: 1;
