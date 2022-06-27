@@ -37,3 +37,10 @@
   transition: transform 1s;
   transform: translateY(-450%);
 }
+.hide {
+  opacity: 0;
+}
+.show {
+  opacity: 1;
+  transition: opacity 1s linear;
+}

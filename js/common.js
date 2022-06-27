@@ -2,10 +2,33 @@ const body = document.querySelector("body");
 const topBtn = document.querySelector(".scroll-top");
 const header = document.querySelector(".hd");
 const menuBtn = document.querySelector(".mhd_menu-box");
-let showMenu = false;
+const conTitle = document.querySelector(".con-title");
+const conSubTitle = document.querySelector(".con-subtitle");
+const postContainer = document.querySelector(".post-container");
+const moreTitle = document.querySelector(".more-title");
+const moreBox = document.querySelector(".more-box");
 
 window.addEventListener("scroll", function (e) {
   let scrollY = window.scrollY;
+  // 컨텐츠 영역 show hide
+  if (scrollY >= 200) {
+    conTitle.classList.remove("hide");
+    conTitle.classList.add("show");
+    conSubTitle.classList.remove("hide");
+    conSubTitle.classList.add("show");
+  }
+  if (scrollY >= 500) {
+    postContainer.classList.remove("hide");
+    postContainer.classList.add("show");
+  }
+  if (scrollY >= 850) {
+    moreTitle.classList.remove("hide");
+    moreTitle.classList.add("show");
+  }
+  if (scrollY >= 1100) {
+    moreBox.classList.remove("hide");
+    moreBox.classList.add("show");
+  }
 
   if (scrollY > 0) {
     topBtn.classList.add("top-btn");
@@ -37,7 +60,6 @@ document.addEventListener("click", function (e) {
   if (showMenu === true) {
     let target = e.target;
     // let curTarget = e.currentTarget;
-    console.log(target);
     if (
       !target.classList.contains("mhd_first") &&
       !target.classList.contains("mhd_menu") &&
